@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: postiz-backend
+    env: node
+    buildCommand: pnpm install --frozen-lockfile
+    startCommand: pnpm run start:prod:backend
+    plan: free
+
+  - type: web
+    name: postiz-frontend
+    env: node
+    buildCommand: pnpm install --frozen-lockfile
+    startCommand: pnpm run start:prod:frontend
+    plan: free
